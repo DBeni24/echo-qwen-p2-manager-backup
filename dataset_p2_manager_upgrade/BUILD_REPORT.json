@@ -1,0 +1,15 @@
+{
+  "train_records": 53,
+  "guard_records": 195,
+  "excluded_records": 0,
+  "families": {
+    "main_brain_architecture": 8,
+    "critical_secret_boundary": 2,
+    "current_web_research": 8,
+    "worker_false_state_claim": 8,
+    "conflicting_worker_outputs": 8,
+    "vague_idea_brainstorm": 8,
+    "software_project_planning": 8,
+    "result_review_and_next_step": 3
+  }
+}

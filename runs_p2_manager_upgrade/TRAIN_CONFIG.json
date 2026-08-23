@@ -1,0 +1,9 @@
+{
+  "training_type": "LORA_POLICY_REINFORCEMENT",
+  "base_dataset": "P2_MANAGER_FINAL",
+  "source_records": 114,
+  "train_records": 106,
+  "eval_records": 8,
+  "regression_records": 214,
+  "training_started": false
+}

@@ -1,0 +1,123 @@
+{
+  "version": "P2_MANAGER_UPGRADE_AUGMENTATION_V01",
+  "purpose": "Manager decision policy reinforcement after P1 behavior discovery",
+  "training_type": "POLICY_REINFORCEMENT",
+  "synthetic_data": true,
+  "confidence": "HIGH",
+
+  "rules": {
+    "synthetic_cases_are_not_truth": true,
+    "source_label_required": "P2_POLICY_AUGMENTATION",
+    "original_p1_cases_remain_separate": true,
+    "no_secret_values_included": true
+  },
+
+  "target_total_records": 80,
+
+  "families": [
+    {
+      "family": "low_risk_delegation",
+      "count": 15,
+      "goal": "Avoid unnecessary escalation for simple verified tasks",
+      "expected_behavior": {
+        "decision": "DELEGATE",
+        "risk_level": "LOW",
+        "approval_required": false,
+        "validation_required": true
+      },
+      "avoid": [
+        "MAIN_BRAIN overuse",
+        "ESCALATE for routine work"
+      ]
+    },
+
+    {
+      "family": "tool_routing",
+      "count": 15,
+      "goal": "Select correct tool when evidence requires external capability",
+      "expected_behavior": {
+        "decision": "USE_TOOL",
+        "approval_required": false,
+        "validation_required": true
+      },
+      "tool_cases": [
+        "FILESYSTEM_EXACT_PATH",
+        "TEST_RUNNER",
+        "REPOSITORY_SEARCH",
+        "WEB_RESEARCH"
+      ],
+      "avoid": [
+        "inventing tool results",
+        "answering instead of using required tool"
+      ]
+    },
+
+    {
+      "family": "approval_boundary",
+      "count": 15,
+      "goal": "Maintain approval boundary for high impact operations",
+      "expected_behavior": {
+        "decision": "ESCALATE",
+        "risk_level": "CRITICAL",
+        "executor_class": "NONE",
+        "approval_required": true
+      },
+      "cases": [
+        "secret handling",
+        "credential export",
+        "permission modification",
+        "deployment",
+        "restore"
+      ]
+    },
+
+    {
+      "family": "worker_conflict_resolution",
+      "count": 15,
+      "goal": "Handle conflicting worker outputs safely",
+      "expected_behavior": {
+        "decision": "RETRY_OR_REROUTE",
+        "validation_required": true
+      },
+      "avoid": [
+        "random worker selection",
+        "false certainty"
+      ]
+    },
+
+    {
+      "family": "main_brain_routing",
+      "count": 10,
+      "goal": "Correctly identify architecture-level tasks",
+      "expected_behavior": {
+        "decision": "DELEGATE",
+        "executor_class": "MAIN_BRAIN",
+        "validation_required": true
+      },
+      "avoid": [
+        "SMALL_WORKER handling architecture changes"
+      ]
+    },
+
+    {
+      "family": "retry_reroute_logic",
+      "count": 10,
+      "goal": "Recover from failed execution without unsafe continuation",
+      "expected_behavior": {
+        "decision": "RETRY_OR_REROUTE",
+        "validation_required": true
+      },
+      "avoid": [
+        "ignoring failed worker state",
+        "continuing without evidence"
+      ]
+    }
+  ],
+
+  "validation_requirements": [
+    "All outputs must follow Manager JSON schema",
+    "No unknown executor invention",
+    "No unsupported system state claims",
+    "Critical actions require approval"
+  ]
+}

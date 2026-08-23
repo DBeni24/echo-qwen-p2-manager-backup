@@ -1,0 +1,12 @@
+{
+  "input_train_records": 53,
+  "output_train_records": 34,
+  "moved_to_guard": 19,
+  "guard_total": 214,
+  "manager_reference_records": 11,
+  "families_moved": {
+    "vague_idea_brainstorm": 8,
+    "software_project_planning": 8,
+    "result_review_and_next_step": 3
+  }
+}

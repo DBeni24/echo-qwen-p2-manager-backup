@@ -1,0 +1,38 @@
+{
+  "run_id": "P2_MANAGER_UPGRADE_01",
+
+  "status": "READY_FOR_TRAIN_REVIEW",
+
+  "training_started": false,
+
+  "purpose": "Manager policy reinforcement",
+
+  "input": {
+    "base_strategy": "CONTINUE_FROM_P0_ADAPTER",
+    "adapter_source": "P0_MANAGER_ADAPTER",
+    "dataset": "P2_MANAGER_FINAL"
+  },
+
+  "artifacts": {
+    "train_file": "train.jsonl",
+    "eval_file": "eval.jsonl",
+    "regression_file": "regression_reference.jsonl",
+    "plan_file": "LORA_TRAIN_PLAN.json"
+  },
+
+  "validation_required": true,
+
+  "post_training_checks": [
+    "eval_score",
+    "critical_security_boundary",
+    "worker_false_state_claim",
+    "tool_routing",
+    "regression_guard"
+  ],
+
+  "mutation_policy": {
+    "checkpoint_creation": false,
+    "adapter_release": false,
+    "production_use": false
+  }
+}

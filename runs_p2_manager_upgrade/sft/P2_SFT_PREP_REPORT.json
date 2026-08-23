@@ -1,0 +1,10 @@
+{
+  "status": "PREPARED",
+  "input_train": 106,
+  "input_eval": 8,
+  "output_train": 106,
+  "output_eval": 8,
+  "rejected": 0,
+  "guard_records": 8,
+  "rejected_cases": []
+}

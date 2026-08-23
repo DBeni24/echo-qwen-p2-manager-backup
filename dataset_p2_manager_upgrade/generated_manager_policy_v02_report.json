@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE",
+  "input_cases": 114,
+  "generated": 100,
+  "rejected": 104,
+  "variation_per_case": 10,
+  "output": "/workspace/echo/dataset/p2_manager_upgrade/generated_manager_policy_v02.jsonl",
+  "sha256": "e2b072cfd502d5680b55346555afc31c89d51cf40463d659250ab0c61ed7eb19",
+  "created": "2026-08-23T23:34:04.889532"
+}

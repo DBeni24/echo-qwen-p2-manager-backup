@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "api_base": "http://127.0.0.1:1234",
+  "endpoint": "/api/v1/chat",
+  "model_key": "qwen/qwen3.5-9b",
+  "model_identifier": "echo-qwen-baseline",
+  "quantization": "Q4_K_M",
+  "gpu_offload": "max",
+  "default_context_length": 8192,
+  "context_bands": [
+    8192,
+    16384,
+    32768,
+    65536
+  ],
+  "temperature": 0.0,
+  "reasoning": "off",
+  "store": false,
+  "runner_concurrency": 1,
+  "request_timeout_seconds": 2400,
+  "restore_context_after_run": 8192
+}

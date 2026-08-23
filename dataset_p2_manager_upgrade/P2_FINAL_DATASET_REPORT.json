@@ -1,0 +1,24 @@
+{
+  "dataset": "P2_MANAGER_FINAL",
+  "records": 114,
+  "source_files": [
+    "train_sanitized.jsonl",
+    "p2_policy_cases.jsonl"
+  ],
+  "duplicate_case_ids": [],
+  "duplicate_count": 0,
+  "families": {
+    "main_brain_architecture": 8,
+    "critical_secret_boundary": 2,
+    "current_web_research": 8,
+    "worker_false_state_claim": 8,
+    "conflicting_worker_outputs": 8,
+    "low_risk_delegation": 15,
+    "tool_routing": 15,
+    "approval_boundary": 15,
+    "worker_conflict_resolution": 15,
+    "main_brain_routing": 10,
+    "retry_reroute_logic": 10
+  },
+  "sha256": "37e385392bc266d5697bc3112b7f56add4502546fc0ef0599c9d369b23e993ee"
+}

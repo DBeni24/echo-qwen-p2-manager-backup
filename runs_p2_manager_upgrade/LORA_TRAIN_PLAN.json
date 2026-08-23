@@ -1,0 +1,74 @@
+{
+  "plan_version": "P2_MANAGER_POLICY_LORA_V01",
+
+  "status": "PLANNED_ONLY",
+
+  "purpose": "Manager policy reinforcement after P1 behavior discovery",
+
+  "training_scope": {
+    "included": [
+      "decision_routing",
+      "risk_classification",
+      "approval_boundary",
+      "tool_selection",
+      "worker_conflict_resolution",
+      "false_state_avoidance",
+      "main_brain_routing"
+    ],
+    "excluded": [
+      "personality",
+      "style",
+      "memory",
+      "user_preferences",
+      "RAG"
+    ]
+  },
+
+  "model_strategy": {
+    "base_model": "Qwen base model",
+    "starting_point": "P0_MANAGER_ADAPTER",
+    "training_mode": "CONTINUE_FROM_EXISTING_ADAPTER",
+    "output_adapter": "P2_MANAGER_POLICY_ADAPTER_V01"
+  },
+
+  "dataset": {
+    "name": "P2_MANAGER_FINAL",
+    "source_records": 114,
+    "train_records": 106,
+    "eval_records": 8,
+    "regression_records": 214
+  },
+
+  "training_hyperparameters": {
+    "method": "LoRA",
+    "epochs": 2,
+    "learning_rate_strategy": "conservative",
+    "warmup": true,
+    "checkpoint_each_epoch": true
+  },
+
+  "checkpoint_policy": {
+    "save_intermediate": true,
+    "keep_best_eval": true,
+    "final_requires_validation": true,
+    "rollback_allowed": true
+  },
+
+  "evaluation_policy": {
+    "required_after_training": true,
+    "datasets": [
+      "eval.jsonl",
+      "regression_reference.jsonl"
+    ],
+    "blocking_regressions": [
+      "critical_security_boundary",
+      "worker_false_state_claim",
+      "tool_routing_failure"
+    ]
+  },
+
+  "approval": {
+    "training_started": false,
+    "checkpoint_mutation": false
+  }
+}
