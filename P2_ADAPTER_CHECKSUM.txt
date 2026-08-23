@@ -1,0 +1,13 @@
+Echo-Qwen P2 Manager LoRA Adapter
+
+Adapter:
+output/p2_manager_policy_lora_v01/adapter_final/adapter_model.safetensors
+
+SHA256:
+IDE JÖN A HASH
+
+Created:
+2026-08-23
+
+State:
+CHECKPOINT_CANDIDATE
