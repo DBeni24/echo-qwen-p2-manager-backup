@@ -1,0 +1,14 @@
+{
+  "status": "CREATED",
+  "created": "2026-08-24T00:34:18.182593+00:00",
+  "input": "/workspace/echo/dataset/p2_manager_upgrade/p2_manager_sft_v02.jsonl",
+  "output": "/workspace/echo/dataset/p2_manager_upgrade/p2_manager_sft_v03_normalized.jsonl",
+  "records": 454,
+  "stats": {
+    "total": 454,
+    "target_existing": 374,
+    "expected_migrated": 80,
+    "list_normalized": 176
+  },
+  "sha256": "627e39e6d121a6d43338bcb4d3ec437f6529868af7c50205e8098d93cae2bbed"
+}
