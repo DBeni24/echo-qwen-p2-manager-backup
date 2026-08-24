@@ -1,0 +1,15 @@
+{
+  "status": "LIVE_PROCESS_RECOVERY_CHECKPOINT",
+  "source_pid": 1963,
+  "records": 2713,
+  "original_target_count": 10000,
+  "node": "cloud_rtx6000",
+  "seed": 6000,
+  "stats": {
+    "calls": 3959,
+    "rejected": 1246,
+    "accepted": 2713
+  },
+  "sha256": "6f17bdab90000009ed4580ac2a9f9f5c148cf33d95f1e9bbdbc802d0a05bc295",
+  "output": "/workspace/echo/dataset/p2_manager_upgrade/generated_manager_v04_cloud_rtx6000_RECOVERY_01.jsonl"
+}

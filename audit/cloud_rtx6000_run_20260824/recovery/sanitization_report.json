@@ -1,0 +1,13 @@
+{
+  "records": 2713,
+  "raw_sha256": "6f17bdab90000009ed4580ac2a9f9f5c148cf33d95f1e9bbdbc802d0a05bc295",
+  "redacted_sha256": "23e6590abc63dee165c6b795600e83bc388c5d4c672982fa3fd8a391ef019104",
+  "redactions_by_type": {
+    "stripe_key": 2
+  },
+  "affected_line_numbers": [
+    897,
+    1718
+  ],
+  "raw_file_uploaded_to_github": false
+}
