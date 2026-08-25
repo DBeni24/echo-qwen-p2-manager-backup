@@ -1,0 +1,15 @@
+﻿AI SERVER 3090 V04 REVIEW SNAPSHOT
+
+Captured snapshot: 2026-08-25
+Purpose: dataset audit / repair review
+Public file: REDACTED snapshot only
+Raw private snapshot is NOT included
+
+Raw private snapshot lines: 261
+Redacted public lines: 261
+Raw private SHA256: 05DE8F4569F70029F3AE6ABFB70D285ADC9FE3715D938EFE634DFF530F74C619
+Redacted SHA256: 0484FE813F650FCFEE0BDA8EA19540E9807BBBFA902233E6894376EFECF053F2
+Generator source SHA256: 64D614BDBBD67D0C5FAF6A70B974090FC5AC75C3714FF92D3D71548C39A58B4E
+
+Generator process was still running when this snapshot was taken.
+This is an intermediate debug snapshot, not the final 3000-record output.
